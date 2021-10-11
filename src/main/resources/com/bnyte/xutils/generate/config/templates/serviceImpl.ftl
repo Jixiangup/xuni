@@ -10,8 +10,7 @@ package ${packageName};
 </#compress>
 
 
-@RestController
-@RequestMapping("/${address}")
-public class ${className} {
+@Service
+public class ${className} implements ${parent} {
 
 }

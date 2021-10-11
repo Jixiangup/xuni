@@ -8,10 +8,6 @@ package ${packageName};
         </#list>
     </#if>
 </#compress>
-
-
-@RestController
-@RequestMapping("/${address}")
-public class ${className} {
+public interface ${className} {
 
 }
