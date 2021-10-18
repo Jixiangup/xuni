@@ -1,4 +1,4 @@
-package com.bnyte.xutils.generate.boot;
+package com.bnyte.xutils.boot;
 
 import com.bnyte.xutils.generate.entity.MySQL;
 import com.bnyte.xutils.generate.enums.GenerateType;
