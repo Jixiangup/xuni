@@ -44,7 +44,7 @@ public class FreeMarkerHandle {
                         packageNameBuilder.append(".").append(GenerateType.SERVICE.getValue());
                         // 调用生成
                         builder(filepath, mySQL, packageNameBuilder.toString(), false, GenerateTemplate.SERVICE);
-                        builder(filepath, mySQL, packageNameBuilder.append(".impl").toString(), true, GenerateTemplate.SERVICE_IMPL);
+                        builder(filepath, mySQL, packageNameBuilder.toString(), true, GenerateTemplate.SERVICE_IMPL);
                         break;
                     case 2:
                         packageNameBuilder.append(".").append(GenerateType.ENTITY.getValue());
@@ -54,7 +54,7 @@ public class FreeMarkerHandle {
                     case 3:
                         packageNameBuilder.append(".").append(GenerateType.MAPPER.getValue());
                         builder(filepath, mySQL, packageNameBuilder.toString(), false, GenerateTemplate.MAPPER);
-                        builder(filepath, mySQL, packageNameBuilder.append(".impl").toString(), true, GenerateTemplate.MAPPER_IMPL);
+                        builder(filepath, mySQL, packageNameBuilder.toString(), true, GenerateTemplate.MAPPER_IMPL);
                         // 调用生成
                         break;
                 }
