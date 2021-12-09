@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.bnyte</groupId>
-    <artifactId>xutils</artifactId>
+    <artifactId>xuni</artifactId>
     <version>1.0.1-RELEASE</version>
     <packaging>jar</packaging>
-    <description>开发过程中常用的工具</description>
-    <name>xutils</name>
-    <url>https://github.com/bnyte/xutils</url>
+    <description>开发过程中常用的工具类、util、解决方案等</description>
+    <name>xuni</name>
+    <url>https://github.com/bnyte/xuni</url>
 
     <!-- 开源许可 -->
     <licenses>
@@ -24,12 +24,12 @@
     <!-- issue提交地址 -->
     <issueManagement>
         <system>github</system>
-        <url>https://github.com/bnyte/xutils/issues</url>
+        <url>https://github.com/bnyte/xuni/issues</url>
     </issueManagement>
 
     <scm>
-        <url>https://github.com/bnyte/xutils</url>
-        <connection>scm:git:https://github.com/bnyte/xutils.git</connection>
+        <url>https://github.com/bnyte/xuni</url>
+        <connection>scm:git:https://github.com/bnyte/xuni.git</connection>
         <developerConnection>https://blog.bnyte.com</developerConnection>
         <tag>1.0.0</tag>
     </scm>
@@ -44,32 +44,14 @@
     </developers>
 
     <properties>
-        <java.version>11</java.version>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <java.version>8</java.version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
         <gpg.keyname>0xE0164C30</gpg.keyname>
     </properties>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>1.2.6</version>
-        </dependency>
 
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.25</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
-        <dependency>
-            <groupId>org.freemarker</groupId>
-            <artifactId>freemarker</artifactId>
-            <version>2.3.31</version>
-        </dependency>
 
     </dependencies>
 
