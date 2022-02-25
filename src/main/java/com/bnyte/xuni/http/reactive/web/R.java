@@ -1,7 +1,5 @@
 package com.bnyte.xuni.http.reactive.web;
 
-import com.bnyte.xuni.exception.XuniException;
-
 import java.io.Serializable;
 import java.util.*;
 
@@ -11,7 +9,7 @@ import java.util.*;
  * @date 2021-12-09 18:37
  * @email bnytezz@gmail.com
  */
-public class Response<T> implements Serializable {
+public class R<T> implements Serializable {
     private static final long serialVersionUID = 94264211209183700L;
 
     /**
@@ -35,10 +33,10 @@ public class Response<T> implements Serializable {
      *  message: succeeded
      * @return 链式返回当前响应成功对象
      */
-    public static <T> Response<T> ok() {
-        Response<T> response = new Response<>();
-        response.codeAndMessage(ResponseDesc.ok);
-        return response;
+    public static <T> R<T> ok() {
+        R<T> r = new R<>();
+        r.codeAndMessage(Status.ok);
+        return r;
     }
 
     /**
@@ -47,11 +45,11 @@ public class Response<T> implements Serializable {
      *  message: succeeded
      * @return 链式返回当前响应成功对象
      */
-    public static <T> Response<T> ok(T data) {
-        Response<T> response = new Response<>();
-        response.codeAndMessage(ResponseDesc.ok);
-        response.data = data;
-        return response;
+    public static <T> R<T> ok(T data) {
+        R<T> r = new R<>();
+        r.codeAndMessage(Status.ok);
+        r.data = data;
+        return r;
     }
 
     /**
@@ -60,17 +58,17 @@ public class Response<T> implements Serializable {
      *  message: failed
      * @return 链式返回当前响应失败对象
      */
-    public static <T> Response<T> error() {
-        Response<T> response = new Response<>();
-        response.codeAndMessage(ResponseDesc.error);
-        return response;
+    public static <T> R<T> error() {
+        R<T> r = new R<>();
+        r.codeAndMessage(Status.error);
+        return r;
     }
 
     /**
      * 设置当前链式对象响应结果数据集，使用这种方式会直接覆盖掉已经存在的data数据
      * @return 链式返回当前设置好响应结果集的响应对象
      */
-    public Response<T> data(T data) {
+    public R<T> data(T data) {
         if (this.data == null) {
             this.data = data;
         } else {
@@ -93,13 +91,13 @@ public class Response<T> implements Serializable {
      * @param desc 响应描述对象
      * @return 返回当前链式对象
      */
-    public Response<T> codeAndMessage(ResponseDesc desc) {
+    public R<T> codeAndMessage(Status desc) {
         this.setCode(desc.getCode());
         this.setMessage(desc.getMessage());
         return this;
     }
 
-    private Response() {
+    private R() {
     }
 
     public Integer getCode() {
@@ -133,17 +131,5 @@ public class Response<T> implements Serializable {
                 ", message='" + message + '\'' +
                 ", data=" + data +
                 '}';
-    }
-
-    public static void main(String[] args) {
-        Map<String, Object> map1 = new HashMap<>();
-        map1.put("1", 1);
-        Map<String, Object> map2 = new HashMap<>();
-        map2.put("2", 2);
-        Map<String, Object> map3 = new HashMap<>();
-        map3.put("3", 3);
-        Response<Object> ok = Response.ok().data(map2).data(map3);
-        System.out.println(ok);
-
     }
 }

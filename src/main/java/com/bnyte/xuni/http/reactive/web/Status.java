@@ -7,7 +7,7 @@ import java.io.Serializable;
  * @date 2021-12-09 18:42
  * @email bnytezz@gmail.com
  */
-public enum ResponseDesc implements Serializable {
+public enum Status implements Serializable {
     ok(0, "succeeded"),
     error(-1, "failed"),
     ;
@@ -22,7 +22,7 @@ public enum ResponseDesc implements Serializable {
      */
     private String message;
 
-    ResponseDesc(Integer code, String message) {
+    Status(Integer code, String message) {
         this.code = code;
         this.message = message;
     }
