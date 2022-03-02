@@ -86,6 +86,16 @@ public class R<T> implements Serializable {
         return this;
     }
 
+    public R<T> code(Integer code) {
+        this.code = code;
+        return this;
+    }
+
+    public R<T> message(String message) {
+        this.message = message;
+        return this;
+    }
+
     /**
      * 设置状态码以及响应信息
      * @param desc 响应描述对象
