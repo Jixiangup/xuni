@@ -6,7 +6,7 @@
 
     <groupId>com.bnyte</groupId>
     <artifactId>xuni</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <packaging>jar</packaging>
     <description>开发过程中常用的工具类、util、解决方案等</description>
     <name>xuni</name>
